@@ -235,10 +235,9 @@ h1, .main-slider li {
     margin-top: 110px;
 }
 
-.slider-image {
-
+.main-slider img {
+    position: absolute;
 }
-
 
 
 
