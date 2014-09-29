@@ -102,8 +102,10 @@ Cores:
 
 Cinza escuro (upper-header) - #576f6f
 Cinza claro (main-slider background) - #c8d8d7
+Cinza claro 2 (border-bottom h1 slider) - #b6bfb6
 Laranja (menu) - #f28858
 Laranja escuro (menu border) - #b56642
+Laranja escuro 2 (menu a:hover #cd8757
 
 */
 
@@ -124,7 +126,7 @@ li {
 /*Header*/
 
 .container {
-    width: 1200px;
+    width: 940px;
     margin: 0 auto;
 }
 
@@ -154,7 +156,8 @@ body a {
 }
 
 .logo, h1 {
-    font-size: 19px;
+    font-size: 24px;
+    line-height: 24px;
 }
 
 header ul {
@@ -176,11 +179,22 @@ header li {
     border-bottom: 3px solid #b56642;
 }
 
-.menu a, .menu ul {margin-top: 19px;}
+.menu a, .menu ul {
+    margin-top: 19px;
+}
+
+.menu ul a {
+    padding: 5px 10px;
+}
+
+.menu ul a:hover {
+    background-color: #cd8757;
+    border-bottom: 2px solid #b56642;
+}
 
 .menu li {
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 /*header*/
@@ -196,11 +210,15 @@ h1 {
 h1, .main-slider li {
     color: #FFF;
     background-color: #8c9796;
+    border-bottom: 2px solid #b6bfb6;
 }
 
 .main-slider {
     height: 500px;
     background-color: #c8d8d7;
+}
+
+.main-slider .container {
     position: relative;
 }
 
@@ -236,7 +254,12 @@ h1, .main-slider li {
 }
 
 .slider-image {
-
+    background: url(../img/pc-ipad.png) no-repeat;
+    width: 471px;
+    height: 317px;
+    position: absolute;
+    right: 0px;
+    top: 120px;
 }
 
 
