@@ -197,7 +197,7 @@ header li {
     margin-left: 10px;
 }
 
-/*header*/
+/*fim do header*/
 
 /*main-slider*/
 
@@ -262,9 +262,24 @@ h1, .main-slider li {
     top: 120px;
 }
 
+/*fim do main-slider*/
 
+h2 {
+    font-family: 'open_sansbold', sans-serif;
+    font-size: 22px;
+    color: #cd8757;
+}
 
+.articles {
+    margin-top: 100px;
+    text-align: center;
+}
 
+.articles article {
+    width: 300px;
+    display: inline-block;
+    margin: 0 15px;
+}
 
 
 /* ==========================================================================
