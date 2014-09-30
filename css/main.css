@@ -96,17 +96,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
 /*
 Cores:
 
 Cinza escuro (upper-header) - #576f6f
 Cinza claro (main-slider background) - #c8d8d7
 Cinza claro 2 (border-bottom h1 slider) - #b6bfb6
+Cinza claro 3 (support background) - #f5f5f5
+Cinza escuro 2 (texto support e provide) - #687170
 Laranja (menu) - #f28858
 Laranja escuro (menu border) - #b56642
 Laranja escuro 2 (menu a:hover #cd8757
-
+Azul (more button) #77a1a0
+Azul escuro (more button border) #576f6f
+687170 ?
 */
 
 /*.centralizar {
@@ -123,7 +126,43 @@ li {
     list-style: none;
 }
 
-/*Header*/
+/* ---- BOTÕES ---- */
+
+.menu, .button, .nav {
+    background-color: #f28858;
+    border-bottom: 3px solid;
+}
+
+.button {
+    padding: 12px 25px;
+}
+
+.nav {
+    padding: 25px;
+}
+
+.features, .live, .menu, .nav {
+    border-color: #b56642;
+}
+
+.features:hover, .live:hover, .nav:hover {
+    background-color: #b56642;
+}
+
+.more {
+    background-color: #77a1a0;
+    border-color: #576f6f;
+    padding: 12px 45px;
+    margin: 10px 0;
+}
+
+.more:hover {
+    background-color: #576f6f;
+}
+
+/* ---------------- */
+
+/* ---- HEADER ---- */
 
 .container {
     width: 940px;
@@ -174,11 +213,6 @@ header li {
     height: 60px;
 }
 
-.menu, .features-button, .nav {
-    background-color: #f28858;
-    border-bottom: 3px solid #b56642;
-}
-
 .menu a, .menu ul {
     margin-top: 19px;
 }
@@ -197,9 +231,9 @@ header li {
     margin-left: 10px;
 }
 
-/*fim do header*/
+/* -- FIM DO HEADER -- */
 
-/*main-slider*/
+/*---- MAIN-SLIDER ---- */
 
 h1 {
     display: inline-block;
@@ -216,6 +250,7 @@ h1, .main-slider li {
 .main-slider {
     height: 500px;
     background-color: #c8d8d7;
+    position: relative;
 }
 
 .main-slider .container {
@@ -226,7 +261,7 @@ h1, .main-slider li {
     font-size: 13px;
     margin-bottom: 5px;
     padding: 6px 8px;
-    float:left; 
+    float: left; 
     clear: both;
 }
 
@@ -239,18 +274,11 @@ h1, .main-slider li {
 
 .main-slider ul {margin-bottom: 30px;}
 
-.features-button {
-    padding: 12px 25px;
-}
-
-.features-button:hover {
-    background-color: #b56642;
-}
-
 .main-slider .bottom {
     height: 99px;
+    width: 1200px;
     background: url(../img/menu-slider_bg-btm.png) no-repeat;
-    margin-top: 110px;
+    margin: 110px auto;
 }
 
 .slider-image {
@@ -262,7 +290,33 @@ h1, .main-slider li {
     top: 120px;
 }
 
-/*fim do main-slider*/
+.nav {
+    position: absolute;
+    top: 210px;
+}
+
+.nav.right:before {
+    font-family: 'untitled-font-1';
+    content: 'r';
+}
+
+.nav.left:before {
+    font-family: 'untitled-font-1';
+    content: 'l';
+}
+
+.nav.right {
+    right: 0;
+}
+
+.nav.left {
+    left: 0;
+}
+
+
+/* -- FIM DO MAIN-SLIDER -- */
+
+/* ---- ARTICLES ---- */
 
 h2 {
     font-family: 'open_sansbold', sans-serif;
@@ -271,7 +325,8 @@ h2 {
 }
 
 .articles {
-    margin-top: 100px;
+    font-size: 15px;
+    margin: 100px 0 55px 0;
     text-align: center;
 }
 
@@ -281,6 +336,23 @@ h2 {
     margin: 0 15px;
 }
 
+.articles p {
+    margin-bottom: 40px;
+}
+
+/* -- FIM DOS ARTICLES -- */
+
+/* ---- SUPPORT-CONTENT ---- */
+
+.support-content {
+    background-color: #f5f5f5;
+}
+
+.support-content, .provide, .articles {
+    color: #687170;
+}
+
+/* -- FIM DO SUPPORT-CONTENT -- */
 
 /* ==========================================================================
    Helper classes
