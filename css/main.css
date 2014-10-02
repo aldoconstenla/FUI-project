@@ -137,10 +137,6 @@ li {
     padding: 12px 25px;
 }
 
-.nav {
-    padding: 25px;
-}
-
 .features, .live, .menu, .nav {
     border-color: #b56642;
 }
@@ -293,15 +289,20 @@ h1, .main-slider li {
 .nav {
     position: absolute;
     top: 210px;
+    padding-top: 15px;
+}
+
+.nav.right:before, .nav.left:before {
+    font-family: 'untitled-font-1';
+    font-size: 55px;
+    line-height: 55px;
 }
 
 .nav.right:before {
-    font-family: 'untitled-font-1';
     content: 'r';
 }
 
 .nav.left:before {
-    font-family: 'untitled-font-1';
     content: 'l';
 }
 
