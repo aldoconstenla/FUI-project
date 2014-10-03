@@ -128,9 +128,13 @@ li {
 
 /* ---- BOTÕES ---- */
 
-.menu, .button, .nav {
+.menu, .button, .nav, .nav-client {
     background-color: #f28858;
     border-bottom: 3px solid;
+}
+
+.button, .nav, .nav-client, .support-content {
+    border-radius: 6px;
 }
 
 .button {
@@ -145,14 +149,17 @@ li {
     background-color: #b56642;
 }
 
-.more {
+.more, .nav-client {
     background-color: #77a1a0;
     border-color: #576f6f;
+}
+
+.more {
     padding: 12px 45px;
     margin: 10px 0;
 }
 
-.more:hover {
+.more:hover, .nav-client:hover {
     background-color: #576f6f;
 }
 
@@ -215,6 +222,7 @@ header li {
 
 .menu ul a {
     padding: 5px 10px;
+    border-radius: 8px;
 }
 
 .menu ul a:hover {
@@ -292,25 +300,35 @@ h1, .main-slider li {
     padding-top: 15px;
 }
 
+.nav-client {
+    position: absolute;
+    top: 120px;
+    font-size: 25px;
+    padding: 10px 10px 3px 10px;
+}
+
 .nav.right:before, .nav.left:before {
-    font-family: 'untitled-font-1';
     font-size: 55px;
     line-height: 55px;
 }
 
-.nav.right:before {
+.right:before, .left:before {
+    font-family: 'untitled-font-1';
+}
+
+.right:before {
     content: 'r';
 }
 
-.nav.left:before {
+.left:before {
     content: 'l';
 }
 
-.nav.right {
+.right {
     right: 0;
 }
 
-.nav.left {
+.left {
     left: 0;
 }
 
@@ -453,9 +471,88 @@ $bgs: top bottom;
     }
 }
 
+@mixin definir-fonte($font, $tamanho, $cor) {
+    font-family: $font, sans-serif;
+    font-size: $tamanho;
+    color: $cor;
+}
 
+.news {
+    .news-articles {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    article {
+        border: 2px solid #f2f2f2;
+        border-radius: 10px;
+        display: inline-block;
+        position: relative;
+        width: 304px;
+        &:nth-child(2) {
+            margin: 0 3px;
+        }
+        img {
+            border-radius: 10px 10px 0 0;
+        }
+        .news-info {
+            margin: 0 18px;
+        }
+        h2 {
+            font-size: 19px;
+            padding: 22px 30px 0 30px;
+        }
+        p {
+            @include definir-fonte('open_sansregular', 13px, #7f8c8c);
+        }
+        a {
+            @include definir-fonte('open_sanssemibold_italic', 14px, #77a1a0);
+        }
+        .list-icon {
+            background: url(../img/list-icon.png);
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 50%;
+            margin-top: -35px;
+            margin-left: -25px;
+        }
+        .news-category {
+            @include definir-fonte('open_sansitalic', 12px, #9a9a9a);
+            margin: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e1e1;
+        }
+        li {
+            display: inline-block;
+            &:first-child {
+                margin-right: 130px;
+            }
+        }
+    }
+}
 
-/* -- FIM DO SUPPORT-CONTENT -- */
+.footer-top {
+        background: url(../img/footer_bg-top.png);
+        width: 1200px;
+        height: 99px;
+        margin: 0 auto;
+}
+
+footer {
+    background-color: #f28858;
+    .about {
+        float: left;
+        width: 570px;
+        li {
+            display: inline-block;
+        }
+    }
+    .products {
+        width: 365px;
+    }
+}
+
 
 /* ==========================================================================
    Helper classes
