@@ -44,3 +44,12 @@
 .icon-chevron-left:before {
   content: "l";
 }
+.icon-talk-chat-2:before {
+  content: "a";
+}
+.icon-lock:before {
+  content: "b";
+}
+.icon-log-out:before {
+  content: "c";
+}

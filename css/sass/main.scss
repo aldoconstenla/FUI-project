@@ -209,6 +209,28 @@ header ul {
 header li {
     display: inline-block;
     margin-top: 0;
+    margin-left: 30px;
+}
+
+.upper-header a {
+    color: #c8d8d7;
+}
+
+.sales:before, .login:before, .signup:before {
+    font-family: 'untitled-font-1';
+    margin-right: 5px;
+}
+
+.sales:before {
+    content: 'a';
+}
+
+.login:before {
+    content: 'b';
+}
+
+.signup:before {
+    content: 'c';
 }
 
 .menu {
