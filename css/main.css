@@ -107,7 +107,7 @@ li {
 .features:hover, .live:hover, .nav:hover {
   background-color: #b56642; }
 
-.more, .nav-client {
+.more, .nav-client, .subscribe {
   background-color: #77a1a0;
   border-color: #576f6f; }
 
@@ -115,7 +115,7 @@ li {
   padding: 12px 45px;
   margin: 10px 0; }
 
-.more:hover, .nav-client:hover {
+.more:hover, .nav-client:hover, .subscribe:hover {
   background-color: #576f6f; }
 
 /* ---------------- */
@@ -419,17 +419,62 @@ h2 {
   background: url(../img/footer_bg-top.png);
   width: 1200px;
   height: 99px;
-  margin: 0 auto; }
+  margin: -12px auto; }
 
 footer {
   background-color: #f28858; }
+  footer h2 {
+    color: #FFF; }
+  footer p {
+    font-family: "open_sansregular", sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 25px; }
   footer .about {
     float: left;
-    width: 570px; }
+    width: 390px; }
     footer .about li {
       display: inline-block; }
+    footer .about a {
+      color: #f1cdbc;
+      font-size: 13px; }
+      footer .about a:after {
+        content: '/';
+        margin: 0 3px 0 6px; }
   footer .products {
-    width: 365px; }
+    float: right;
+    position: relative;
+    width: 400px; }
+    footer .products ul {
+      font-family: "open_sansregular", sans-serif;
+      font-size: 14px;
+      color: #f1c4af;
+      line-height: 25px;
+      display: inline-block;
+      margin: 0 40px 40px 0; }
+    footer .products li:before {
+      font-family: 'untitled-font-1';
+      font-size: 10px;
+      content: 'r';
+      margin-right: 5px; }
+    footer .products .subscribe {
+      position: absolute;
+      right: 0;
+      bottom: -8px; }
+    footer .products input {
+      width: 245px;
+      height: 30px;
+      border: 1px solid #fa6734; }
+  footer .footer-bottom {
+    background-color: #b56642;
+    margin-top: 15px; }
+    footer .footer-bottom h3 {
+      float: left;
+      padding: 15px 0 15px 0;
+      margin: 0;
+      font-family: "open_sansbold", sans-serif;
+      font-size: 14px;
+      color: #FFF; }
 
 /* ==========================================================================
    Helper classes

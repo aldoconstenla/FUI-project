@@ -149,7 +149,7 @@ li {
     background-color: #b56642;
 }
 
-.more, .nav-client {
+.more, .nav-client, .subscribe {
     background-color: #77a1a0;
     border-color: #576f6f;
 }
@@ -159,7 +159,7 @@ li {
     margin: 10px 0;
 }
 
-.more:hover, .nav-client:hover {
+.more:hover, .nav-client:hover, .subscribe:hover {
     background-color: #576f6f;
 }
 
@@ -536,21 +536,72 @@ $bgs: top bottom;
         background: url(../img/footer_bg-top.png);
         width: 1200px;
         height: 99px;
-        margin: 0 auto;
+        margin: -12px auto;
 }
 
 footer {
     background-color: #f28858;
+    h2 {
+        color: #FFF;
+    }
+    p {
+        @include definir-fonte('open_sansregular', 14px, #FFF);
+        line-height: 25px;
+    }
     .about {
         float: left;
-        width: 570px;
+        width: 390px;
         li {
             display: inline-block;
         }
+        a {
+            color: #f1cdbc;
+            font-size: 13px;
+            &:after {
+                content: '/';
+                margin: 0 3px 0 6px;
+            }
+        }
     }
     .products {
-        width: 365px;
+        float: right;
+        position: relative;
+        width: 400px;
+        ul {
+            @include definir-fonte('open_sansregular', 14px, #f1c4af);
+            line-height: 25px;
+            display: inline-block;
+            margin: 0 40px 40px 0;
+        }
+        li:before {
+            font-family: 'untitled-font-1';
+            font-size: 10px;
+            content: 'r';
+            margin-right: 5px;
+        }
+        .subscribe {
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+        }
+        input {
+            width: 245px;
+            height: 30px;
+            border: 1px solid #fa6734;
+        }
     }
+
+    .footer-bottom {
+        background-color: #b56642;
+        margin-top: 15px;
+        h3 {
+            float: left;
+            padding: 15px 0 15px 0;
+            margin: 0;
+            @include definir-fonte('open_sansbold', 14px, #FFF);
+        }
+    }
+
 }
 
 
